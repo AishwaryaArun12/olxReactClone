@@ -4,7 +4,9 @@
   background-color: #ebeeef;
   border-radius: 4px;
 }
-
+.d-flex {
+  display: flex;
+}
 .heading {
   display: flex;
   justify-content: space-between;
@@ -55,6 +57,7 @@
 
 .card .image img {
   height: 100px;
+  width: 200px;
   max-width: 100%;
   max-height: 100%;
   min-height: 100%;

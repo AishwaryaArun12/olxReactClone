@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import { firebaseContext } from './store/Context';
+import {auth,db,storage} from './firebase/config';
 import App from './App';
-
+import Context from './store/Context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <firebaseContext.Provider value={{auth,db,storage}}>
+      <Context> 
+        <App />
+      </Context>
+
+    </firebaseContext.Provider>
   </React.StrictMode>
 );
 
